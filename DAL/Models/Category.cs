@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RetailManagement.Models
+namespace DAL.Models
 {
     public class Category
     {

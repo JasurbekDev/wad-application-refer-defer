@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RetailManagement.Models
+namespace DAL.Models
 {
     public class Product
     {
@@ -21,9 +21,6 @@ namespace RetailManagement.Models
 
         [StringLength(500, MinimumLength = 5)]
         public string Description { get; set; }
-
-        [MaxLength]
-        public byte[] Image { get; set; }
 
         public int? ProductLeft { get; set; }
 

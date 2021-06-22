@@ -1,3 +1,7 @@
+using DAL;
+using DAL.Models;
+using DAL.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -5,10 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+using System.Reflection;
+
 
 namespace RetailManagement
 {
@@ -26,6 +29,11 @@ namespace RetailManagement
         {
             services.AddDbContext<ProductDbContext>(
                 opt => opt.UseSqlServer(Configuration.GetConnectionString("RetailManagement")));
+
+            services.AddScoped<IRepository<Product>, ProductRepository>();
+            services.AddScoped<IRepository<Category>, CategoryRepository>();
+
+            services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
 
             services.AddControllersWithViews();
         }
@@ -54,7 +62,7 @@ namespace RetailManagement
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Products}/{action=Index}/{id?}");
             });
         }
     }

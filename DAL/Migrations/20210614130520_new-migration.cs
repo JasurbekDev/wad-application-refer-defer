@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RetailManagement.Migrations
+namespace DAL.Migrations
 {
-    public partial class initialmigration : Migration
+    public partial class newmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +29,6 @@ namespace RetailManagement.Migrations
                     Brand = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                    Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     ProductLeft = table.Column<int>(type: "int", nullable: true),
                     CategoryId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -52,13 +50,13 @@ namespace RetailManagement.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Brand", "CategoryId", "Description", "Image", "Price", "ProductLeft", "ProductName" },
-                values: new object[] { 1, "KOTON", 1, "this is a T-shirt", null, 100000.0m, 30, "T-Shirt" });
+                columns: new[] { "Id", "Brand", "CategoryId", "Description", "Price", "ProductLeft", "ProductName" },
+                values: new object[] { 1, "KOTON", 1, "this is a T-shirt", 100000.0m, 30, "T-Shirt" });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Brand", "CategoryId", "Description", "Image", "Price", "ProductLeft", "ProductName" },
-                values: new object[] { 2, "KOTON", 1, "this is a Jacket for spring", null, 225000.0m, 22, "Jacket" });
+                columns: new[] { "Id", "Brand", "CategoryId", "Description", "Price", "ProductLeft", "ProductName" },
+                values: new object[] { 2, "KOTON", 1, "this is a Jacket for spring", 225000.0m, 22, "Jacket" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",

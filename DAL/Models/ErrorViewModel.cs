@@ -1,6 +1,6 @@
 using System;
 
-namespace RetailManagement.Models
+namespace DAL.Models
 {
     public class ErrorViewModel
     {

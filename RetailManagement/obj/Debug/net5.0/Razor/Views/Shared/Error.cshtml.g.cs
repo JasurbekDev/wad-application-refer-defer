@@ -21,13 +21,20 @@ using RetailManagement;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\Admin\Desktop\Level5\Semester 2\WAD\00007986\RetailManagement\Views\_ViewImports.cshtml"
-using RetailManagement.Models;
+using DAL;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Admin\Desktop\Level5\Semester 2\WAD\00007986\RetailManagement\Views\_ViewImports.cshtml"
+using DAL.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"62488e1a77b939dc85e7d3307ce28986248ce5e7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8b6580783ee16faf45b2e32e576df6ddadfbfe49", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

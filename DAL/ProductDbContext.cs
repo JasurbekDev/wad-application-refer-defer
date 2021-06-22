@@ -1,11 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RetailManagement.Models;
+﻿using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RetailManagement
+namespace DAL
 {
     public class ProductDbContext : DbContext
     {
@@ -29,7 +29,6 @@ namespace RetailManagement
                 Brand = "KOTON",
                 Price = 100000.0M,
                 Description = "this is a T-shirt",
-                Image = null,
                 ProductLeft = 30,
                 CategoryId = 1
             },
@@ -40,7 +39,6 @@ namespace RetailManagement
                 Brand = "KOTON",
                 Price = 225000.0M,
                 Description = "this is a Jacket for spring",
-                Image = null,
                 ProductLeft = 22,
                 CategoryId = 1
             }
